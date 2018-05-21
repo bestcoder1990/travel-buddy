@@ -4,11 +4,11 @@ from .models import *
 from django.contrib import messages
 
 def index(request):
-	context = {
+    context = {
         'trips' : Trip.objects.filter(trip_members=request.session['user_id']),
         'other_trips' : Trip.objects.exclude(trip_members=request.session['user_id'])
     }
-	return render(request, "belt_app/travels.html", context)
+    return render(request, "belt_app/travels.html", context)
 
 def destination(request, id):
     context = {
