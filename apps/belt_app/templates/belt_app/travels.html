@@ -33,7 +33,6 @@
         <h3>Other User's Travel Plans</h3>
         <table>
             <tr>
-                <th>Name</th>
                 <th>Destination</th>
                 <th>Travel Start Date</th>
                 <th>Travel End Date</th>
@@ -45,7 +44,6 @@
                         <td><a href="/travels/destination/{{trip.id}}">{{trip.destination}}</a></td>
                         <td>{{trip.start_date}}</td>
                         <td>{{trip.end_date}}</td>
-                        <td>{{trip.plan}}</td>
                         <td><a href="/travels/join/{{trip.id}}">Join</td></a>
                     </tr>
                 {% endfor %}
